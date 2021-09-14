@@ -111,7 +111,7 @@ const ProductShow = data =>{
     <div class="card-body">
       <h5 class="card-title">${data.title}</h5>
       <p class="card-text">${data.description}</p>
-      <p class="card-text"><small class="text-muted">Rating : ${data.rating.rate}      <i class="bi bi-person-fill"></i>${data.rating.count}</small></p>
+      <p class="card-text"><small class="text-white">Rating: ${data.rating.rate} <i class="bi bi-person-fill"></i> ${data.rating.count}</small></p>
     </div>
   </div> `;  
 }
