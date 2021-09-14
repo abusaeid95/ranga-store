@@ -49,7 +49,7 @@ body {
 .single-product {
   padding: 8px;
   margin-right: 8px;
-  background-color:  #e28b8b3b;
+  background-color:  #cecece3b;
   transition: 0.6s;
 }
 .single-product:hover {
@@ -57,9 +57,6 @@ body {
   border-radius: 10px;
   border: 1px solid cyan;
 }
-.modal-content{
-  background-color: #ffffff00;
- }
  .product-image {
      width: 250px;
      height: 264px
@@ -69,13 +66,14 @@ body {
   height: 254px;
   width: 156px;
   text-align: center;
+  border-radius: 10px;
 }
 .modal-card{
     position: relative;
     display: flex;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #2e2626ca;
+    background-color: #7c6a6aca;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
@@ -83,10 +81,13 @@ body {
     align-items: center;
     color: lavender;
 }
+.modal-content{
+  background-color: #7c6a6aca;
+ }
 
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
+  background-color:  #cecece3b;
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
