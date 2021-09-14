@@ -58,25 +58,54 @@ const setInnerText = (id, value) => {
 const productSearching=()=>{
   const searchValue = document.getElementById('input-key').value.toLowerCase();
   const productSearch = document.getElementsByClassName("product");
+  const allProduct  = document.getElementById('all-products')
   const errorMsg = document.getElementById('error-text');
+  const noFound = document.getElementById('noresult-found');
+  // if(searchValue===''){
+  //   // errorMsg.innerText = 'Please enter your desire name';
+  //   errorMsg.innerHTML=  `
+  //   <div class="error-div col-lg-4  align-items-center mx-auto rounded">
+  //     <h5 class="text-danger">Please Enter Product Name</h5>
+  //   </div>
+  //   `
+  //   // mainContainer.style.display ="block";
+  //   return;
+  // }
+  // for (const element of productSearch) {      
+  //  if (element.innerText.toLowerCase().includes(searchValue)){
+  //     element.style.display = "block";
+  //   } 
+  //   else {
+  //     element.style.display = "none";
+  //   }
+  // }   
+  // errorMsg.textContent = '';
+
   if(searchValue===''){
-    // errorMsg.innerText = 'Please enter your desire name';
-    errorMsg.innerHTML=  `
-    <div class="error-div col-lg-4  align-items-center mx-auto rounded">
-      <h5 class="text-danger">Please Enter Product Name</h5>
-    </div>
-    `
-    // mainContainer.style.display ="block";
+    errorMsg.innerText = 'Please Enter product name!!!';
+    noFound.textContent = '';
+    document.getElementById('input-key').value = '';
     return;
   }
+
   for (const element of productSearch) {      
    if (element.innerText.toLowerCase().includes(searchValue)){
       element.style.display = "block";
+      
     } 
     else {
       element.style.display = "none";
     }
-  }   
+  }
+  
+  // no result found
+  if(!allProduct.innerText.toLowerCase().includes(searchValue)){
+    noFound.innerText = 'NO Product Found!!!';
+    errorMsg.textContent = '';
+    document.getElementById('input-key').value = '';
+    return;
+  } 
+  noFound.textContent = '';  
   errorMsg.textContent = '';
   document.getElementById('input-key').value = '';
 };
@@ -132,4 +161,40 @@ const updateTotal = () => {
 };
 loadProducts();
 
+  //  // no result found
+  // //  const searchProducts=()=>{
+  // //   const searchValue = document.getElementById('input-key').value.toLowerCase();
+  // //   const productSearch = document.getElementsByClassName("product");
+  // //   const allProduct  = document.getElementById('all-products')
+  // //   const errorMsg = document.getElementById('error-msg');
+  // //   // const noFound = document.getElementById('noresult-found');
 
+  //   // if search value empty
+  //   if(searchValue===''){
+  //     errorMsg.innerText = 'Please Enter product name!!!';
+  //     noFound.textContent = '';
+  //     document.getElementById('input-field').value = '';
+  //     return;
+  //   }
+
+  //   for (const element of productSearch) {      
+  //    if (element.innerText.toLowerCase().includes(searchValue)){
+  //       element.style.display = "block";
+        
+  //     } 
+  //     else {
+  //       element.style.display = "none";
+  //     }
+  //   }
+    
+  //   // no result found
+  //   if(!allProduct.innerText.toLowerCase().includes(searchValue)){
+  //     noFound.innerText = 'NO Product Found!!!';
+  //     errorMsg.textContent = '';
+  //     document.getElementById('input-field').value = '';
+  //     return;
+  //   } 
+  //   noFound.textContent = '';  
+  //   errorMsg.textContent = '';
+  //   document.getElementById('input-field').value = '';
+  // };
