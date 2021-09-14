@@ -35,7 +35,7 @@ body {
 }
 
 #all-products {
-  background-color: rgb(240 232 232) !important;
+  background-color: #f7f8fa !important;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* border: 1px solid black; */
