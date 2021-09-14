@@ -12,7 +12,7 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product shadow-sm p-3 mb-5 bg-body rounded g-2">
+    div.innerHTML = `<div class="single-product shadow p-3 mb-5 rounded g-2">
       <div>
     <img class="product-image rounded" src=${image}></img>
       </div>
@@ -61,26 +61,8 @@ const productSearching=()=>{
   const allProduct  = document.getElementById('all-products')
   const errorMsg = document.getElementById('error-text');
   const noFound = document.getElementById('noresult-found');
-  // if(searchValue===''){
-  //   // errorMsg.innerText = 'Please enter your desire name';
-  //   errorMsg.innerHTML=  `
-  //   <div class="error-div col-lg-4  align-items-center mx-auto rounded">
-  //     <h5 class="text-danger">Please Enter Product Name</h5>
-  //   </div>
-  //   `
-  //   // mainContainer.style.display ="block";
-  //   return;
-  // }
-  // for (const element of productSearch) {      
-  //  if (element.innerText.toLowerCase().includes(searchValue)){
-  //     element.style.display = "block";
-  //   } 
-  //   else {
-  //     element.style.display = "none";
-  //   }
-  // }   
-  // errorMsg.textContent = '';
-
+  
+   // if search value empty
   if(searchValue===''){
     errorMsg.innerText = 'Please Enter product name!!!';
     noFound.textContent = '';
@@ -160,41 +142,3 @@ const updateTotal = () => {
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
 loadProducts();
-
-  //  // no result found
-  // //  const searchProducts=()=>{
-  // //   const searchValue = document.getElementById('input-key').value.toLowerCase();
-  // //   const productSearch = document.getElementsByClassName("product");
-  // //   const allProduct  = document.getElementById('all-products')
-  // //   const errorMsg = document.getElementById('error-msg');
-  // //   // const noFound = document.getElementById('noresult-found');
-
-  //   // if search value empty
-  //   if(searchValue===''){
-  //     errorMsg.innerText = 'Please Enter product name!!!';
-  //     noFound.textContent = '';
-  //     document.getElementById('input-field').value = '';
-  //     return;
-  //   }
-
-  //   for (const element of productSearch) {      
-  //    if (element.innerText.toLowerCase().includes(searchValue)){
-  //       element.style.display = "block";
-        
-  //     } 
-  //     else {
-  //       element.style.display = "none";
-  //     }
-  //   }
-    
-  //   // no result found
-  //   if(!allProduct.innerText.toLowerCase().includes(searchValue)){
-  //     noFound.innerText = 'NO Product Found!!!';
-  //     errorMsg.textContent = '';
-  //     document.getElementById('input-field').value = '';
-  //     return;
-  //   } 
-  //   noFound.textContent = '';  
-  //   errorMsg.textContent = '';
-  //   document.getElementById('input-field').value = '';
-  // };
